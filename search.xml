@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[如何优雅安全地在深层数据结构中取值]]></title>
+    <url>%2F2017%2F05%2F02%2F%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%AE%89%E5%85%A8%E5%9C%B0%E5%9C%A8%E6%B7%B1%E5%B1%82%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%AD%E5%8F%96%E5%80%BC%2F</url>
+    <content type="text"><![CDATA[如果有如下数据const props = { user: { posts: [ { title: &apos;Foo&apos;, comments: [ &apos;Good one!&apos;, &apos;Interesting...&apos; ] }, { title: &apos;Bar&apos;, comments: [ &apos;Ok&apos; ] }, { title: &apos;Baz&apos;, comments: []} ], comments: [...] } } 以前props.user &amp;&amp; props.user.posts &amp;&amp; props.user.posts[0] &amp;&amp; props.user.posts[0].comments 现在1.写个javascript函数const get = (p, o) =&gt; p.reduce((xs, x) =&gt; (xs &amp;&amp; xs[x]) ? xs[x] : null, o) console.log(get([&apos;user&apos;, &apos;posts&apos;, 0, &apos;comments&apos;], props)) // [ &apos;Good one!&apos;, &apos;Interesting...&apos; ] console.log(get([&apos;user&apos;, &apos;post&apos;, 0, &apos;comments&apos;], props)) // null 2.使用Ramda提供的path或pathOr函数path const getUserComments = R.path([&apos;user&apos;, &apos;posts&apos;, 0, &apos;comments&apos;]) getUserComments(props) // [ &apos;Good one!&apos;, &apos;Interesting...&apos; ] getUserComments({}) // null pathOr const getUserComments = R.pathOr([], [&apos;user&apos;, &apos;posts&apos;, 0, &apos;comments&apos;]) getUserComments(props) // [ &apos;Good one!&apos;, &apos;Interesting...&apos; ] getUserComments({}) // [] pathOr可以在没有找到值时指定默认值 参考链接：如何优雅安全地在深层数据结构中取值]]></content>
+      <categories>
+        <category>javascript</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2017%2F04%2F30%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post 1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>

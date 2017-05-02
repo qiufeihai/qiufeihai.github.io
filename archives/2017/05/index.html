@@ -89,7 +89,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="SImMon_Fo4r">
-<meta property="og:url" content="feihai.me/index.html">
+<meta property="og:url" content="feihai.me/archives/2017/05/index.html">
 <meta property="og:site_name" content="SImMon_Fo4r">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SImMon_Fo4r">
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="feihai.me/"/>
+  <link rel="canonical" href="feihai.me/archives/2017/05/"/>
 
 
 
 
 
-  <title> SImMon_Fo4r </title>
+  <title> 歸檔 | SImMon_Fo4r </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-hk">
@@ -161,9 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -293,312 +291,67 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
+
+    <span class="archive-page-counter">
+      
+      
+      
+        
+      
+      嗯..! 目前共有 2 篇文章。 繼續努力。
+    </span>
+
     
+
+      
+      
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="feihai.me/2017/05/02/如何优雅安全地在深层数据结构中取值/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SImMon_Fo4r">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/usericon.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SImMon_Fo4r">
-    </span>
-
-    
-      <header class="post-header">
-
+      
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/02/如何优雅安全地在深层数据结构中取值/" itemprop="url">
-                  如何优雅安全地在深层数据结构中取值
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-05-02T23:21:48+08:00">
-                2017-05-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
       
       
 
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-          
-            <h1 id="如果有如下数据"><a href="#如果有如下数据" class="headerlink" title="如果有如下数据"></a>如果有如下数据</h1><pre><code>const props = {
-user: {
-    posts: [
-        { title: &apos;Foo&apos;, comments: [ &apos;Good one!&apos;, &apos;Interesting...&apos; ] },
-        { title: &apos;Bar&apos;, comments: [ &apos;Ok&apos; ] },
-        { title: &apos;Baz&apos;, comments: []}
-    ],
-    comments: [...]
-  }
-}
-</code></pre><h1 id="以前"><a href="#以前" class="headerlink" title="以前"></a>以前</h1><pre><code>props.user &amp;&amp;
-props.user.posts &amp;&amp;
-props.user.posts[0] &amp;&amp;
-props.user.posts[0].comments
-</code></pre><h1 id="现在"><a href="#现在" class="headerlink" title="现在"></a>现在</h1><h2 id="1-写个javascript函数"><a href="#1-写个javascript函数" class="headerlink" title="1.写个javascript函数"></a>1.写个javascript函数</h2><pre><code>const get = (p, o) =&gt; p.reduce((xs, x) =&gt; (xs &amp;&amp; xs[x]) ? xs[x] : null, o)
-console.log(get([&apos;user&apos;, &apos;posts&apos;, 0, &apos;comments&apos;], props)) // [ &apos;Good one!&apos;, &apos;Interesting...&apos; ]
-console.log(get([&apos;user&apos;, &apos;post&apos;, 0, &apos;comments&apos;], props)) // null  
-</code></pre><h2 id="2-使用Ramda提供的path或pathOr函数"><a href="#2-使用Ramda提供的path或pathOr函数" class="headerlink" title="2.使用Ramda提供的path或pathOr函数"></a>2.使用Ramda提供的path或pathOr函数</h2><p><strong>path</strong></p>
-<pre><code>const getUserComments = R.path([&apos;user&apos;, &apos;posts&apos;, 0, &apos;comments&apos;])
-getUserComments(props) // [ &apos;Good one!&apos;, &apos;Interesting...&apos; ]
-getUserComments({}) // null
-</code></pre><p><strong>pathOr</strong></p>
-<pre><code>const getUserComments = R.pathOr([], [&apos;user&apos;, &apos;posts&apos;, 0, &apos;comments&apos;])
-getUserComments(props) // [ &apos;Good one!&apos;, &apos;Interesting...&apos; ]
-getUserComments({}) // []
-</code></pre><blockquote>
-<p>pathOr可以在没有找到值时指定默认值</p>
-</blockquote>
-<p>参考链接：<a href="https://juejin.im/post/590861b744d90400693a1891" target="_blank" rel="external">如何优雅安全地在深层数据结构中取值</a></p>
-
-          
+            <a class="post-title-link" href="/2017/05/02/如何优雅安全地在深层数据结构中取值/" itemprop="url">
+              
+                <span itemprop="name">如何优雅安全地在深层数据结构中取值</span>
+              
+            </a>
         
-      
-    </div>
+      </h1>
 
-    <div>
-      
-    </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-05-02T23:21:48+08:00"
+              content="2017-05-02" >
+          05-02
+        </time>
+      </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+    </header>
   </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="feihai.me/2017/04/30/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SImMon_Fo4r">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/usericon.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SImMon_Fo4r">
-    </span>
 
     
-      <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/30/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-04-30T02:54:00+08:00">
-                2017-04-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+
 
 
           </div>
@@ -800,6 +553,12 @@ getUserComments({}) // []
   
 
   
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
+
 
   
 
