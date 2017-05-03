@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="flex,css," />
 
 
 
@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="如果有如下数据const props = { user: {     posts: [         { title: &amp;apos;Foo&amp;apos;, comments: [ &amp;apos;Good one!&amp;apos;, &amp;apos;Interesting...&amp;apos; ] },         { title: &amp;apos;Bar&amp;apos;, comments: [ &amp;apos;Ok&amp;">
-<meta name="keywords" content="javascript">
+<meta name="description" content="容器属性   属性 描述 值     flex-direction 属性决定主轴的方向（即项目的排列方向）。 row / row-reverse / column / column-reverse   flex-wrap 属性定义，如果一条轴线排不下，如何换行。 nowrap / wrap / wrap-reverse   flex-flow 属性是flex-direction属性和flex-wr">
+<meta name="keywords" content="flex,css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何优雅安全地在深层数据结构中取值">
-<meta property="og:url" content="feihai.me/2017/05/02/如何优雅安全地在深层数据结构中取值/index.html">
+<meta property="og:title" content="flex布局">
+<meta property="og:url" content="feihai.me/2017/05/03/flex布局/index.html">
 <meta property="og:site_name" content="SImMon_Fo4r">
-<meta property="og:description" content="如果有如下数据const props = { user: {     posts: [         { title: &amp;apos;Foo&amp;apos;, comments: [ &amp;apos;Good one!&amp;apos;, &amp;apos;Interesting...&amp;apos; ] },         { title: &amp;apos;Bar&amp;apos;, comments: [ &amp;apos;Ok&amp;">
-<meta property="og:updated_time" content="2017-05-02T16:46:11.208Z">
+<meta property="og:description" content="容器属性   属性 描述 值     flex-direction 属性决定主轴的方向（即项目的排列方向）。 row / row-reverse / column / column-reverse   flex-wrap 属性定义，如果一条轴线排不下，如何换行。 nowrap / wrap / wrap-reverse   flex-flow 属性是flex-direction属性和flex-wr">
+<meta property="og:updated_time" content="2017-05-03T16:11:06.939Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何优雅安全地在深层数据结构中取值">
-<meta name="twitter:description" content="如果有如下数据const props = { user: {     posts: [         { title: &amp;apos;Foo&amp;apos;, comments: [ &amp;apos;Good one!&amp;apos;, &amp;apos;Interesting...&amp;apos; ] },         { title: &amp;apos;Bar&amp;apos;, comments: [ &amp;apos;Ok&amp;">
+<meta name="twitter:title" content="flex布局">
+<meta name="twitter:description" content="容器属性   属性 描述 值     flex-direction 属性决定主轴的方向（即项目的排列方向）。 row / row-reverse / column / column-reverse   flex-wrap 属性定义，如果一条轴线排不下，如何换行。 nowrap / wrap / wrap-reverse   flex-flow 属性是flex-direction属性和flex-wr">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="feihai.me/2017/05/02/如何优雅安全地在深层数据结构中取值/"/>
+  <link rel="canonical" href="feihai.me/2017/05/03/flex布局/"/>
 
 
 
 
 
-  <title> 如何优雅安全地在深层数据结构中取值 | SImMon_Fo4r </title>
+  <title> flex布局 | SImMon_Fo4r </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-hk">
@@ -307,7 +307,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="feihai.me/2017/05/02/如何优雅安全地在深层数据结构中取值/">
+    <link itemprop="mainEntityOfPage" href="feihai.me/2017/05/03/flex布局/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SImMon_Fo4r">
@@ -328,7 +328,7 @@
             
             
               
-                如何优雅安全地在深层数据结构中取值
+                flex布局
               
             
           </h1>
@@ -343,8 +343,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-05-02T23:21:48+08:00">
-                2017-05-02
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-05-03T22:51:46+08:00">
+                2017-05-03
               </time>
             
 
@@ -366,8 +366,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
                   </a>
                 </span>
 
@@ -401,35 +401,91 @@
       
 
       
-        <h1 id="如果有如下数据"><a href="#如果有如下数据" class="headerlink" title="如果有如下数据"></a>如果有如下数据</h1><pre><code>const props = {
-user: {
-    posts: [
-        { title: &apos;Foo&apos;, comments: [ &apos;Good one!&apos;, &apos;Interesting...&apos; ] },
-        { title: &apos;Bar&apos;, comments: [ &apos;Ok&apos; ] },
-        { title: &apos;Baz&apos;, comments: []}
-    ],
-    comments: [...]
-  }
-}
-</code></pre><h1 id="以前"><a href="#以前" class="headerlink" title="以前"></a>以前</h1><pre><code>props.user &amp;&amp;
-props.user.posts &amp;&amp;
-props.user.posts[0] &amp;&amp;
-props.user.posts[0].comments
-</code></pre><h1 id="现在"><a href="#现在" class="headerlink" title="现在"></a>现在</h1><h2 id="1-写个javascript函数"><a href="#1-写个javascript函数" class="headerlink" title="1.写个javascript函数"></a>1.写个javascript函数</h2><pre><code>const get = (p, o) =&gt; p.reduce((xs, x) =&gt; (xs &amp;&amp; xs[x]) ? xs[x] : null, o)
-console.log(get([&apos;user&apos;, &apos;posts&apos;, 0, &apos;comments&apos;], props)) // [ &apos;Good one!&apos;, &apos;Interesting...&apos; ]
-console.log(get([&apos;user&apos;, &apos;post&apos;, 0, &apos;comments&apos;], props)) // null  
-</code></pre><h2 id="2-使用Ramda提供的path或pathOr函数"><a href="#2-使用Ramda提供的path或pathOr函数" class="headerlink" title="2.使用Ramda提供的path或pathOr函数"></a>2.使用Ramda提供的path或pathOr函数</h2><p><strong>path</strong></p>
-<pre><code>const getUserComments = R.path([&apos;user&apos;, &apos;posts&apos;, 0, &apos;comments&apos;])
-getUserComments(props) // [ &apos;Good one!&apos;, &apos;Interesting...&apos; ]
-getUserComments({}) // null
-</code></pre><p><strong>pathOr</strong></p>
-<pre><code>const getUserComments = R.pathOr([], [&apos;user&apos;, &apos;posts&apos;, 0, &apos;comments&apos;])
-getUserComments(props) // [ &apos;Good one!&apos;, &apos;Interesting...&apos; ]
-getUserComments({}) // []
-</code></pre><blockquote>
-<p>pathOr可以在没有找到值时指定默认值</p>
-</blockquote>
-<p>参考链接：<a href="https://juejin.im/post/590861b744d90400693a1891" target="_blank" rel="external">如何优雅安全地在深层数据结构中取值</a></p>
+        <h1 id="容器属性"><a href="#容器属性" class="headerlink" title="容器属性"></a>容器属性</h1><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flex-direction</td>
+<td>属性决定主轴的方向（即项目的排列方向）。</td>
+<td>row / row-reverse / column / column-reverse</td>
+</tr>
+<tr>
+<td>flex-wrap</td>
+<td>属性定义，如果一条轴线排不下，如何换行。</td>
+<td>nowrap / wrap / wrap-reverse</td>
+</tr>
+<tr>
+<td>flex-flow</td>
+<td>属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。</td>
+<td></td>
+</tr>
+<tr>
+<td>justify-content</td>
+<td>属性定义了项目在主轴上的对齐方式。</td>
+<td>flex-start / flex-end / center / space-between / space-around</td>
+</tr>
+<tr>
+<td>align-items</td>
+<td>属性定义项目在交叉轴上如何对齐。</td>
+<td>flex-start / flex-end / center / baseline / stretch</td>
+</tr>
+<tr>
+<td>align-content</td>
+<td>属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</td>
+<td>flex-start / flex-end / center / space-between / space-around / stretch</td>
+</tr>
+</tbody>
+</table>
+<h1 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h1><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>order</td>
+<td>属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</td>
+<td></td>
+</tr>
+<tr>
+<td>flex-grow</td>
+<td>属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。</td>
+<td></td>
+</tr>
+<tr>
+<td>flex-shrink</td>
+<td>属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</td>
+<td></td>
+</tr>
+<tr>
+<td>flex-basis</td>
+<td>属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。</td>
+<td></td>
+</tr>
+<tr>
+<td>flex</td>
+<td>属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。</td>
+<td></td>
+</tr>
+<tr>
+<td>align-self</td>
+<td>属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。</td>
+<td>auto / flex-start / flex-end / center / baseline / stretch</td>
+</tr>
+</tbody>
+</table>
+<p>参考链接：</p>
+<p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇</a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html" target="_blank" rel="external">Flex 布局教程：实例篇</a></p>
 
       
     </div>
@@ -459,7 +515,9 @@ getUserComments({}) // []
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag"># javascript</a>
+            <a href="/tags/flex/" rel="tag"># flex</a>
+          
+            <a href="/tags/css/" rel="tag"># css</a>
           
         </div>
       
@@ -472,8 +530,8 @@ getUserComments({}) // []
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/30/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/05/02/如何优雅安全地在深层数据结构中取值/" rel="next" title="如何优雅安全地在深层数据结构中取值">
+                <i class="fa fa-chevron-left"></i> 如何优雅安全地在深层数据结构中取值
               </a>
             
           </div>
@@ -481,10 +539,6 @@ getUserComments({}) // []
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/03/flex布局/" rel="prev" title="flex布局">
-                flex布局 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -615,7 +669,7 @@ getUserComments({}) // []
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如果有如下数据"><span class="nav-number">1.</span> <span class="nav-text">如果有如下数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#以前"><span class="nav-number">2.</span> <span class="nav-text">以前</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#现在"><span class="nav-number">3.</span> <span class="nav-text">现在</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-写个javascript函数"><span class="nav-number">3.1.</span> <span class="nav-text">1.写个javascript函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-使用Ramda提供的path或pathOr函数"><span class="nav-number">3.2.</span> <span class="nav-text">2.使用Ramda提供的path或pathOr函数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#容器属性"><span class="nav-number">1.</span> <span class="nav-text">容器属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目属性"><span class="nav-number">2.</span> <span class="nav-text">项目属性</span></a></li></ol></div>
             
 
           </div>
